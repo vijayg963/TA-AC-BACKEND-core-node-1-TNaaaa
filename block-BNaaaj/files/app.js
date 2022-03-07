@@ -1,0 +1,1 @@
+let area = require('area');
