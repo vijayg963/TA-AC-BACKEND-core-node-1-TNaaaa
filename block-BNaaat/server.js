@@ -5,11 +5,13 @@ var server = http.createServer(handleRequest);
 
 function handleRequest(req, res) {
   if (req.method === 'GET' && req.url === '/file') {
-    res.setHeader('Content-Tpye', 'text/html');
-    fs.readFile('./node.html');
-    res.end();
+    fs.readFile('./node.html', (err, content) => {
+      if (err) console.log(err);
+      res.setHeader('Content-Tpye', 'text/html');
+      res.end(content);
+    });
   }
-  if (req.method === 'GET' && req.url === '/about') {
+  if (req.method === 'GET' && req.url === '/stream') {
     res.setHeader('Content-Tpye', 'text/html');
     fs.createReadStream('./node.html').pipe(res);
   }
