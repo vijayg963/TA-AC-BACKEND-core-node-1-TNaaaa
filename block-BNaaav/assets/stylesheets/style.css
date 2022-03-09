@@ -1,0 +1,25 @@
+body {
+  max-width: 1200px;
+  background-color: wheat;
+  margin: 0 auto;
+}
+
+h1 {
+  color: brown;
+  font-weight: 800;
+}
+
+h2 {
+  color: blue;
+}
+
+p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(70, 69, 69);
+}
+
+img {
+  height: 600px;
+  max-width: 700px;
+}
